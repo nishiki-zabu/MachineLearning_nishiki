@@ -4,9 +4,9 @@ from sklearn.base import BaseEstimator, RegressorMixin
 
 class Lasso(BaseEstimator, RegressorMixin):
 	def __init__(self, alpha, max_iter):
-		self.alpha = alpha					# 正則化項
+		self.alpha = alpha				# 正則化項
 		self.max_iter = max_iter			# 繰り返し回数
-		self.coef_ = None					# 回帰係数
+		self.coef_ = None				# 回帰係数
 		self.intercept_ = None				# 切片係数
 
 	def _soft_thresholding_operator(self, x, lambda_):
